@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/thehoneymad/ProjectDP/issues"
   },
-  "homepage": "https://github.com/thehoneymad/ProjectDP"
+  "homepage": "https://github.com/thehoneymad/ProjectDP",
+  "dependencies": {
+    "express": "^4.9.5",
+    "nodeunit": "^0.9.0"
+  },
+  "devDependencies": {}
 }
