@@ -1,49 +1,157 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'shrinkwrap' ]
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'npm-auto-dep' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
 4 verbose node symlink /usr/bin/node
-5 error Error: Problems were encountered
-5 error Please correct and try again.
-5 error missing: accepts@~1.1.1, required by express@4.9.6
-5 error missing: cookie-signature@1.0.5, required by express@4.9.6
-5 error missing: debug@~2.0.0, required by express@4.9.6
-5 error missing: depd@0.4.5, required by express@4.9.6
-5 error missing: escape-html@1.0.1, required by express@4.9.6
-5 error missing: etag@~1.4.0, required by express@4.9.6
-5 error missing: finalhandler@0.2.0, required by express@4.9.6
-5 error missing: fresh@0.2.4, required by express@4.9.6
-5 error missing: media-typer@0.3.0, required by express@4.9.6
-5 error missing: methods@1.1.0, required by express@4.9.6
-5 error missing: on-finished@~2.1.0, required by express@4.9.6
-5 error missing: parseurl@~1.3.0, required by express@4.9.6
-5 error missing: path-to-regexp@0.1.3, required by express@4.9.6
-5 error missing: proxy-addr@~1.0.3, required by express@4.9.6
-5 error missing: qs@2.2.4, required by express@4.9.6
-5 error missing: range-parser@~1.0.2, required by express@4.9.6
-5 error missing: send@0.9.3, required by express@4.9.6
-5 error missing: serve-static@~1.6.4, required by express@4.9.6
-5 error missing: type-is@~1.5.2, required by express@4.9.6
-5 error missing: vary@~1.0.0, required by express@4.9.6
-5 error missing: cookie@0.1.2, required by express@4.9.6
-5 error missing: merge-descriptors@0.0.2, required by express@4.9.6
-5 error missing: utils-merge@1.0.0, required by express@4.9.6
-5 error     at shrinkwrap_ (/usr/lib/node_modules/npm/lib/shrinkwrap.js:30:15)
-5 error     at /usr/lib/node_modules/npm/lib/shrinkwrap.js:24:5
-5 error     at /usr/lib/node_modules/npm/lib/ls.js:45:30
-5 error     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:130:5
-5 error     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:244:14
-5 error     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-5 error     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:244:14
-5 error     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-5 error     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:244:14
-5 error     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-6 error If you need help, you may report this *entire* log,
-6 error including the npm and node versions, at:
-6 error     <http://github.com/npm/npm/issues>
-7 error System Linux 3.13.0-24-generic
-8 error command "/usr/bin/node" "/usr/bin/npm" "shrinkwrap"
-9 error cwd /NerdCats/Git/ProjectDP
-10 error node -v v0.10.32
-11 error npm -v 1.4.28
-12 verbose exit [ 1, true ]
+5 verbose cache add [ 'npm-auto-dep', null ]
+6 verbose cache add name=undefined spec="npm-auto-dep" args=["npm-auto-dep",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'npm-auto-dep',
+7 verbose parsed url   path: 'npm-auto-dep',
+7 verbose parsed url   href: 'npm-auto-dep' }
+8 silly lockFile f328e2b4-npm-auto-dep npm-auto-dep
+9 verbose lock npm-auto-dep /home/thehoneymad/.npm/f328e2b4-npm-auto-dep.lock
+10 silly lockFile f328e2b4-npm-auto-dep npm-auto-dep
+11 silly lockFile f328e2b4-npm-auto-dep npm-auto-dep
+12 verbose addNamed [ 'npm-auto-dep', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 23c24d1b-npm-auto-dep npm-auto-dep@
+15 verbose lock npm-auto-dep@ /home/thehoneymad/.npm/23c24d1b-npm-auto-dep.lock
+16 silly addNameRange { name: 'npm-auto-dep', range: '*', hasData: false }
+17 verbose request where is /npm-auto-dep
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 9d9a3d514c26ac84
+20 verbose url raw /npm-auto-dep
+21 verbose url resolving [ 'https://registry.npmjs.org/', './npm-auto-dep' ]
+22 verbose url resolved https://registry.npmjs.org/npm-auto-dep
+23 verbose request where is https://registry.npmjs.org/npm-auto-dep
+24 info trying registry request attempt 1 at 06:14:19
+25 http GET https://registry.npmjs.org/npm-auto-dep
+26 http 200 https://registry.npmjs.org/npm-auto-dep
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Fri, 10 Oct 2014 10:14:20 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+27 silly registry.get     etag: '"68KWOFU4M5L0205GE1L956LPW"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '11725',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-atl6229-ATL',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1412936060.102802,VS0,VE51',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'npm-auto-dep', range: '*', hasData: true }
+29 silly addNameRange versions [ 'npm-auto-dep', [ '0.1.0', '0.1.1' ] ]
+30 verbose addNamed [ 'npm-auto-dep', '0.1.1' ]
+31 verbose addNamed [ '0.1.1', '0.1.1' ]
+32 silly lockFile bc1df1cf-npm-auto-dep-0-1-1 npm-auto-dep@0.1.1
+33 verbose lock npm-auto-dep@0.1.1 /home/thehoneymad/.npm/bc1df1cf-npm-auto-dep-0-1-1.lock
+34 silly lockFile 899682c4--auto-dep-npm-auto-dep-0-1-1-tgz https://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz
+35 verbose lock https://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz /home/thehoneymad/.npm/899682c4--auto-dep-npm-auto-dep-0-1-1-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz',
+36 verbose addRemoteTarball   'a93366ce3438ed8063d27446ecba2efbe7d87f31' ]
+37 info retry fetch attempt 1 at 06:14:20
+38 verbose fetch to= /tmp/npm-3705-Djgdh4iI/registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz
+39 http GET https://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz
+40 http 200 https://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz
+41 silly lockFile 899682c4--auto-dep-npm-auto-dep-0-1-1-tgz https://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz
+42 silly lockFile 899682c4--auto-dep-npm-auto-dep-0-1-1-tgz https://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz
+43 silly lockFile bc1df1cf-npm-auto-dep-0-1-1 npm-auto-dep@0.1.1
+44 silly lockFile bc1df1cf-npm-auto-dep-0-1-1 npm-auto-dep@0.1.1
+45 silly lockFile 23c24d1b-npm-auto-dep npm-auto-dep@
+46 silly lockFile 23c24d1b-npm-auto-dep npm-auto-dep@
+47 silly resolved [ { name: 'npm-auto-dep',
+47 silly resolved     version: '0.1.1',
+47 silly resolved     description: 'Tool that searches your project\'s source code for all requires of external modules. Interactively adds dependencies to package.json based on their metadata.',
+47 silly resolved     bin: { 'npm-auto-dep': './npm-auto-dep.js' },
+47 silly resolved     main: 'npm-auto-dep.js',
+47 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+47 silly resolved     repository: { type: 'git', url: 'git://github.com/OhJeez/npm-auto-dep.git' },
+47 silly resolved     keywords:
+47 silly resolved      [ 'node',
+47 silly resolved        'npm',
+47 silly resolved        'node_modules',
+47 silly resolved        'dependencies',
+47 silly resolved        'metadata',
+47 silly resolved        'dev',
+47 silly resolved        'developer',
+47 silly resolved        'modules',
+47 silly resolved        'require',
+47 silly resolved        'interactive',
+47 silly resolved        'tool' ],
+47 silly resolved     author: { name: 'Christopher Chrapka', url: 'OhJeez' },
+47 silly resolved     license: 'X11 License',
+47 silly resolved     bugs: { url: 'https://github.com/OhJeez/npm-auto-dep/issues' },
+47 silly resolved     dependencies:
+47 silly resolved      { when: '>=2.5.1',
+47 silly resolved        semver: '>=2.2.1',
+47 silly resolved        optimist: '>=0.6.0',
+47 silly resolved        colors: '>=0.6.2' },
+47 silly resolved     readme: 'npm-auto-dep\n============\n\nTool that searches your node.js module source code for all `require`s of external modules.\nInteractively adds dependencies to package.json based on their metadata.\n\n##Installation\n\n    npm install -g npm-auto-dep\n\n##Usage\nWorks only on linux/unix/(probably MacOS). Won\'t probably ever work on Windows out-of-the-box.[1]\n\nChange directory to main directory of your module sources. Run\n\n    npm-auto-dep\n\nOr you can just\n\n    npm-auto-dep /home/kitten_killer/dev/src/node/MAD_protocols\n\nWhich will (try to) find all it\'s dependencies and add them to it\'s package.json .\n\nModule must be initialized first. Best with `npm init`.\n\n`npm-auto-dep` will ask you what to do with every single module it found, like this:\n\n    Add package when [2.5.1] from git repo: https://github.com/cujojs/when\n    [N/y/v/=/>/~/r/c/h]:\n\nIf you enter `h` it will display a hint:\n\n    [No/yes/version/=version/>=version/~version/repository/custom/help]\n\nWhere:\n* No - (default behaviour) dependency will not be changed. If it already is in dependencies, it will stay the same way\n* yes - dependecy will be added, but without version information. That is any version will satisfy.\n* version - custom version specification. You will be asked to enter semver version range.[2]\n* =version - exactly the module version installed will be requested.\n* >=version - same or higher version then one installed will be requested\n* ~version - similar version will be requested. See also semver range spec.\n* repository - npm is told to clone this dependency from metadata specified repository. Currently only git is supported.\n* custom - enter whatever you like, as long as npm can understand it. (Currently `npm-auto-dep` does not validate that)\n* help - display hints and ask again what to do.\n\nAfter you are done you will have to confirm or reject changes, like that:\n\n    Old dependencies:\n    { when: \'>=2.5.1\',\n      semver: \'>=2.2.1\',\n      optimist: \'>=0.6.0\',\n      colors: \'>=0.6.2\' }\n    \n    New dependencies:\n    { when: \'>=2.5.0 <3.0.0\',\n      semver: \'>=2.2.1\',\n      optimist: \'>=0.6.0\',\n      colors: \'>=0.6.2\' }\n    Overwrite dependencies in file /home/kitten_killer/dev/src/npm-auto-dep/package.json ?\n    [y/n]: \n \n[1]: You can get grep and find from cygwin or something and add them to your PATH.\nIt could work, unless some strange CLI argument parsing ensues. Anyway, if you are\na developer able and wiling to do it, you should start using Linux by this point.\n\n[2]: Like that:\n\n    Add package when [2.5.1] from git repo: https://github.com/cujojs/when\n    Already in dependencies in version: >=2.5.1\n    [N/y/v/=/>/r/h]: v\n    Enter version specification (see man 7 semver)\n    > >=2.5.0 <3.0.0\n',
+47 silly resolved     readmeFilename: 'README.md',
+47 silly resolved     _id: 'npm-auto-dep@0.1.1',
+47 silly resolved     dist:
+47 silly resolved      { shasum: 'a93366ce3438ed8063d27446ecba2efbe7d87f31',
+47 silly resolved        tarball: 'http://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz' },
+47 silly resolved     _from: 'npm-auto-dep@',
+47 silly resolved     _npmVersion: '1.3.11',
+47 silly resolved     _npmUser: { name: 'ohjeez', email: 'npm@ojezu.org' },
+47 silly resolved     maintainers: [ [Object] ],
+47 silly resolved     directories: {},
+47 silly resolved     _shasum: 'a93366ce3438ed8063d27446ecba2efbe7d87f31',
+47 silly resolved     _resolved: 'https://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz' } ]
+48 info install npm-auto-dep@0.1.1 into /usr/lib
+49 info installOne npm-auto-dep@0.1.1
+50 verbose lib/node_modules/npm-auto-dep unbuild
+51 verbose tar unpack /home/thehoneymad/.npm/npm-auto-dep/0.1.1/package.tgz
+52 silly lockFile e227c4dc-sr-lib-node-modules-npm-auto-dep tar:///usr/lib/node_modules/npm-auto-dep
+53 verbose lock tar:///usr/lib/node_modules/npm-auto-dep /home/thehoneymad/.npm/e227c4dc-sr-lib-node-modules-npm-auto-dep.lock
+54 silly lockFile c54266c2-m-npm-auto-dep-0-1-1-package-tgz tar:///home/thehoneymad/.npm/npm-auto-dep/0.1.1/package.tgz
+55 verbose lock tar:///home/thehoneymad/.npm/npm-auto-dep/0.1.1/package.tgz /home/thehoneymad/.npm/c54266c2-m-npm-auto-dep-0-1-1-package-tgz.lock
+56 silly gunzTarPerm modes [ '775', '664' ]
+57 error Error: EACCES, mkdir '/usr/lib/node_modules/npm-auto-dep'
+57 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/npm-auto-dep']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/lib/node_modules/npm-auto-dep',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/lib/node_modules/npm-auto-dep',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:107:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Linux 3.13.0-24-generic
+60 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "npm-auto-dep"
+61 error cwd /NerdCats/Git/ProjectDP
+62 error node -v v0.10.32
+63 error npm -v 1.4.28
+64 error path /usr/lib/node_modules/npm-auto-dep
+65 error fstream_path /usr/lib/node_modules/npm-auto-dep
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/lib/node_modules/npm-auto-dep'
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:107:15)
+72 verbose exit [ 3, true ]
