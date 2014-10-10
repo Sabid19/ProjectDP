@@ -32,26 +32,27 @@
 16 silly addNameRange { name: 'npm-auto-dep', range: '*', hasData: false }
 17 verbose request where is /npm-auto-dep
 18 verbose request registry https://registry.npmjs.org/
-19 verbose request id 854509161b0ce9c7
+19 verbose request id c03acd7f3d9557dd
 20 verbose url raw /npm-auto-dep
 21 verbose url resolving [ 'https://registry.npmjs.org/', './npm-auto-dep' ]
 22 verbose url resolved https://registry.npmjs.org/npm-auto-dep
 23 verbose request where is https://registry.npmjs.org/npm-auto-dep
-24 info trying registry request attempt 1 at 06:18:46
+24 info trying registry request attempt 1 at 09:22:07
 25 verbose etag "68KWOFU4M5L0205GE1L956LPW"
 26 http GET https://registry.npmjs.org/npm-auto-dep
 27 http 304 https://registry.npmjs.org/npm-auto-dep
 28 silly registry.get cb [ 304,
-28 silly registry.get   { date: 'Fri, 10 Oct 2014 10:18:46 GMT',
+28 silly registry.get   { date: 'Fri, 10 Oct 2014 13:22:07 GMT',
 28 silly registry.get     server: 'Apache',
 28 silly registry.get     via: '1.1 varnish',
-28 silly registry.get     'last-modified': 'Fri, 10 Oct 2014 10:18:46 GMT',
+28 silly registry.get     'last-modified': 'Fri, 10 Oct 2014 13:22:07 GMT',
 28 silly registry.get     'cache-control': 'max-age=60',
 28 silly registry.get     etag: '"68KWOFU4M5L0205GE1L956LPW"',
-28 silly registry.get     'x-served-by': 'cache-jfk1022-JFK',
+28 silly registry.get     age: '0',
+28 silly registry.get     'x-served-by': 'cache-jfk1031-JFK',
 28 silly registry.get     'x-cache': 'MISS',
 28 silly registry.get     'x-cache-hits': '0',
-28 silly registry.get     'x-timer': 'S1412936326.111435,VS0,VE350',
+28 silly registry.get     'x-timer': 'S1412947327.624004,VS0,VE26',
 28 silly registry.get     vary: 'Accept',
 28 silly registry.get     'content-length': '0',
 28 silly registry.get     'keep-alive': 'timeout=10, max=50',
