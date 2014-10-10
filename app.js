@@ -1,3 +1,3 @@
 var pRequire = require("./projRequire.js");
 
-projRequire("RealmFactory");
+projRequire("Lib::RealmFactory");

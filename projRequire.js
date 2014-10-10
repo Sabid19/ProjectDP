@@ -7,10 +7,6 @@ function getModule(module)
     var PathEx;
     var EndsInJsPattern = new RegExp("\.js$");
     
-    
-    
-    
-    
     if (module.indexOf("::") > -1 ) {
         module = module.replace(/::/g, "/");
     }
