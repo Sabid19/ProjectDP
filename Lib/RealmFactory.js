@@ -5,7 +5,7 @@ function CreateRealm(type)
     var requiredModule;
     try {
         requiredModule = projRequire("Lib.Realms." + type + "Realm"); //This definitely will be handled better;
-        console.log("Current module is", requiredModule);
+        console.log("The address to the main module is "+ require.main.filename);
     }
     catch (err) {
         console.log(err);
@@ -16,7 +16,6 @@ function CreateRealm(type)
 
 CreateRealm("Monopoly");
 
-//module.exports = { CreateRealmWithType: CreateRealm };
 module.exports.testRealmCreation = function (test){
     var ret = CreateRealm("Monopoly");
     console.log(ret);
