@@ -1,4 +1,4 @@
-﻿//Package MonopolyRealm.js
+//Package MonopolyRealm.js
 var express = require('express');
 
 
@@ -11,4 +11,5 @@ function MonopolyRealm()
 module.exports = {
     description: "This is definitely going to the module for monopoly"
 };
+
 module.exports.MonopolyObject = MonopolyRealm;

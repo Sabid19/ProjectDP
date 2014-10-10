@@ -1,11 +1,11 @@
-﻿projDir = __dirname;
+var projDir = __dirname;
 function getModule(module) 
 {
     if (module.indexOf("::") > -1 && module.indexOf(".") > -1)
         throw "invalid format in declaring projDir param, both . and :: present, please curtail .js if you have that in the end of the param";
 
-    var PathEx;
-    var EndsInJsPattern = new RegExp("\.js$");
+    
+    var EndsInJsPattern = new RegExp("\\.js$");
     
     if (module.indexOf("::") > -1 ) {
         module = module.replace(/::/g, "/");
