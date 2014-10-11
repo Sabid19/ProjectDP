@@ -1,5 +1,5 @@
 //This is only for test function, take it off after unit test
-var pRequire = require("../projRequire.js");
+var Util=require("util"); 
 //
 
 
@@ -9,20 +9,24 @@ var MAXROOMS = 50; //Dude you need a constant library;
 ///CreateRealm - Creates a Game Room for specified type
 ///
 ///
-function CanCreateRealm()
+function canCreateRealm()
 {
     return (Realms.length >= MAXROOMS) ;
 }
 
-function CreateRealm(type)
+function createRealm(type)
 {
-    if (!CanCreateRealm()) {
+    if (!canCreateRealm()) {
         
-        var requiredModule;
+        var requiredGameRealm;
         try {
-            requiredModule = projRequire("Lib.Realms." + type + "Realm"); //This definitely will be handled better;
-            var MonopolyObj = new requiredModule.MonopolyObject();
-            Realms.push(MonopolyObj);
+            var requiredModule = projRequire("Lib.Realms." + type + "Realm"); //This definitely will be handled better;
+            var GameRoomObj = new requiredModule[type+"Object"]();
+            
+            Realms.push(GameRoomObj);
+            requiredGameRealm=GameRoomObj;
+            
+            
             //I need to push the room here
         }
     catch (err) {
@@ -31,20 +35,21 @@ function CreateRealm(type)
         
         
         
-        return requiredModule? requiredModule: false;
+        return requiredGameRealm? requiredGameRealm: false;
     }
     else
         return false; // Have to decide what should I return when rooms are maxed out // may be a seperate method canCreateRealm?
 
 }
 
+module.exports={
+    description: "Factory Module for constructing Game Realms, use the constructor with appropriate game room type"
+};
+
+module.exports.CreateRealm=createRealm;
+module.exports.CanCreateRealm=canCreateRealm;
 
 
-module.exports.testRealmCreation = function (test){
-    var ret = CreateRealm("Monopoly");
-    console.log(ret);
-    test.ok(ret, "This does finds the monopoly package");
-    test.done();
 
-}
+
 
