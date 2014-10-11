@@ -3,6 +3,8 @@ var Util=require("util");
 //
 
 
+var Logger = projRequire("Lib::Logger");
+
 var Realms = [];
 var MAXROOMS = 50; //Dude you need a constant library;
 
@@ -22,6 +24,8 @@ function createRealm(type)
         try {
             var requiredModule = projRequire("Lib.Realms." + type + "Realm"); //This definitely will be handled better;
             var GameRoomObj = new requiredModule[type+"Object"]();
+            
+            Logger.CreateLogger(GameRoomObj); // Try catch here please
             
             Realms.push(GameRoomObj);
             requiredGameRealm=GameRoomObj;

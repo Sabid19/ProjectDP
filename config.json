@@ -1,3 +1,4 @@
 {
-    "logdir" : "/Logs/"
+    "logDir" : "/var/log/NerdCats/",
+    "realmsLogDir":"/var/log/NerdCats/Realms/"
 }

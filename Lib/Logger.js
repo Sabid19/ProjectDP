@@ -1,4 +1,6 @@
 var util= require("util");
+var bunyan=require("bunyan");
+
 //I should install bunyan first to do stuff
 
 
@@ -29,9 +31,45 @@ function logRoom()
     
 }
 
-function createLog()
+
+function initiateServerLogger()
+{
+    var logger=bunyan.createLogger({
+        name: "ServerLogger",
+        src: true,
+        streams:[
+            {
+                path: GlobalConf.logDir+"NCGameServer.log"
+            }
+        ]
+    });
+    
+    GLOBAL.ServerLogger=logger;
+    
+    return logger;
+}
+
+
+//Create a unique Logfile for each gameRoom
+function createLogger(gameRealm)
 {
 
+    var LogFileName=gameRealm.id+"-"+gameRealm.type;
+    var logger= bunyan.createLogger({
+        name: LogFileName,
+        src: true,
+        streams:[
+            {
+                path: GlobalConf.realmsLogDir +LogFileName+".log"
+            }
+        ]
+    });
+    
+    gameRealm.logger=logger;
+    
+    return logger;
+    
+  //need to initialize this one straight to the mail logger logger.on('error')
  //these will be used probably with bunyan   
 }
 
@@ -40,7 +78,8 @@ module.exports={
 }
 
 module.exports.LogConsole=logConsole;
-
+module.exports.InitiateServerLogger=initiateServerLogger;
+module.exports.CreateLogger=createLogger;
 
 // Start Test Methods
 
