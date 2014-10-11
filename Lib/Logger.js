@@ -1,4 +1,6 @@
 var util= require("util");
+//I should install bunyan first to do stuff
+
 
 function logConsole(msg, params)
 {
@@ -22,9 +24,25 @@ function logConsole(msg, params)
     
 }
 
+function logRoom()
+{
+    
+}
+
+function createLog()
+{
+
+ //these will be used probably with bunyan   
+}
+
 module.exports={
     description: "Very basic logger"
 }
 
 module.exports.LogConsole=logConsole;
 
+
+// Start Test Methods
+
+// End Test Methods
+// Thanks!
