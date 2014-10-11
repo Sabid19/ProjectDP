@@ -1,14 +1,10 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node',
-1 verbose cli   '/usr/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   '-g',
-1 verbose cli   'npm-auto-dep' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'bunyan' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
 4 verbose node symlink /usr/bin/node
-5 verbose cache add [ 'npm-auto-dep', null ]
-6 verbose cache add name=undefined spec="npm-auto-dep" args=["npm-auto-dep",null]
+5 verbose cache add [ 'bunyan', null ]
+6 verbose cache add name=undefined spec="bunyan" args=["bunyan",null]
 7 verbose parsed url { protocol: null,
 7 verbose parsed url   slashes: null,
 7 verbose parsed url   auth: null,
@@ -18,132 +14,226 @@
 7 verbose parsed url   hash: null,
 7 verbose parsed url   search: null,
 7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'npm-auto-dep',
-7 verbose parsed url   path: 'npm-auto-dep',
-7 verbose parsed url   href: 'npm-auto-dep' }
-8 silly lockFile f328e2b4-npm-auto-dep npm-auto-dep
-9 verbose lock npm-auto-dep /home/thehoneymad/.npm/f328e2b4-npm-auto-dep.lock
-10 silly lockFile f328e2b4-npm-auto-dep npm-auto-dep
-11 silly lockFile f328e2b4-npm-auto-dep npm-auto-dep
-12 verbose addNamed [ 'npm-auto-dep', '' ]
+7 verbose parsed url   pathname: 'bunyan',
+7 verbose parsed url   path: 'bunyan',
+7 verbose parsed url   href: 'bunyan' }
+8 silly lockFile d7c46da5-bunyan bunyan
+9 verbose lock bunyan /home/thehoneymad/.npm/d7c46da5-bunyan.lock
+10 silly lockFile d7c46da5-bunyan bunyan
+11 silly lockFile d7c46da5-bunyan bunyan
+12 verbose addNamed [ 'bunyan', '' ]
 13 verbose addNamed [ null, '*' ]
-14 silly lockFile 23c24d1b-npm-auto-dep npm-auto-dep@
-15 verbose lock npm-auto-dep@ /home/thehoneymad/.npm/23c24d1b-npm-auto-dep.lock
-16 silly addNameRange { name: 'npm-auto-dep', range: '*', hasData: false }
-17 verbose request where is /npm-auto-dep
+14 silly lockFile 59b53e6e-bunyan bunyan@
+15 verbose lock bunyan@ /home/thehoneymad/.npm/59b53e6e-bunyan.lock
+16 silly addNameRange { name: 'bunyan', range: '*', hasData: false }
+17 verbose request where is /bunyan
 18 verbose request registry https://registry.npmjs.org/
-19 verbose request id c03acd7f3d9557dd
-20 verbose url raw /npm-auto-dep
-21 verbose url resolving [ 'https://registry.npmjs.org/', './npm-auto-dep' ]
-22 verbose url resolved https://registry.npmjs.org/npm-auto-dep
-23 verbose request where is https://registry.npmjs.org/npm-auto-dep
-24 info trying registry request attempt 1 at 09:22:07
-25 verbose etag "68KWOFU4M5L0205GE1L956LPW"
-26 http GET https://registry.npmjs.org/npm-auto-dep
-27 http 304 https://registry.npmjs.org/npm-auto-dep
-28 silly registry.get cb [ 304,
-28 silly registry.get   { date: 'Fri, 10 Oct 2014 13:22:07 GMT',
-28 silly registry.get     server: 'Apache',
-28 silly registry.get     via: '1.1 varnish',
-28 silly registry.get     'last-modified': 'Fri, 10 Oct 2014 13:22:07 GMT',
-28 silly registry.get     'cache-control': 'max-age=60',
-28 silly registry.get     etag: '"68KWOFU4M5L0205GE1L956LPW"',
-28 silly registry.get     age: '0',
-28 silly registry.get     'x-served-by': 'cache-jfk1031-JFK',
-28 silly registry.get     'x-cache': 'MISS',
-28 silly registry.get     'x-cache-hits': '0',
-28 silly registry.get     'x-timer': 'S1412947327.624004,VS0,VE26',
-28 silly registry.get     vary: 'Accept',
-28 silly registry.get     'content-length': '0',
-28 silly registry.get     'keep-alive': 'timeout=10, max=50',
-28 silly registry.get     connection: 'Keep-Alive' } ]
-29 verbose etag https://registry.npmjs.org/npm-auto-dep from cache
-30 silly addNameRange number 2 { name: 'npm-auto-dep', range: '*', hasData: true }
-31 silly addNameRange versions [ 'npm-auto-dep', [ '0.1.0', '0.1.1' ] ]
-32 verbose addNamed [ 'npm-auto-dep', '0.1.1' ]
-33 verbose addNamed [ '0.1.1', '0.1.1' ]
-34 silly lockFile bc1df1cf-npm-auto-dep-0-1-1 npm-auto-dep@0.1.1
-35 verbose lock npm-auto-dep@0.1.1 /home/thehoneymad/.npm/bc1df1cf-npm-auto-dep-0-1-1.lock
-36 silly lockFile bc1df1cf-npm-auto-dep-0-1-1 npm-auto-dep@0.1.1
-37 silly lockFile bc1df1cf-npm-auto-dep-0-1-1 npm-auto-dep@0.1.1
-38 silly lockFile 23c24d1b-npm-auto-dep npm-auto-dep@
-39 silly lockFile 23c24d1b-npm-auto-dep npm-auto-dep@
-40 silly resolved [ { name: 'npm-auto-dep',
-40 silly resolved     version: '0.1.1',
-40 silly resolved     description: 'Tool that searches your project\'s source code for all requires of external modules. Interactively adds dependencies to package.json based on their metadata.',
-40 silly resolved     bin: { 'npm-auto-dep': './npm-auto-dep.js' },
-40 silly resolved     main: 'npm-auto-dep.js',
-40 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
-40 silly resolved     repository: { type: 'git', url: 'git://github.com/OhJeez/npm-auto-dep.git' },
-40 silly resolved     keywords:
-40 silly resolved      [ 'node',
-40 silly resolved        'npm',
-40 silly resolved        'node_modules',
-40 silly resolved        'dependencies',
-40 silly resolved        'metadata',
-40 silly resolved        'dev',
-40 silly resolved        'developer',
-40 silly resolved        'modules',
-40 silly resolved        'require',
-40 silly resolved        'interactive',
-40 silly resolved        'tool' ],
-40 silly resolved     author: { name: 'Christopher Chrapka', url: 'OhJeez' },
-40 silly resolved     license: 'X11 License',
-40 silly resolved     bugs: { url: 'https://github.com/OhJeez/npm-auto-dep/issues' },
-40 silly resolved     dependencies:
-40 silly resolved      { when: '>=2.5.1',
-40 silly resolved        semver: '>=2.2.1',
-40 silly resolved        optimist: '>=0.6.0',
-40 silly resolved        colors: '>=0.6.2' },
-40 silly resolved     readme: 'npm-auto-dep\n============\n\nTool that searches your node.js module source code for all `require`s of external modules.\nInteractively adds dependencies to package.json based on their metadata.\n\n##Installation\n\n    npm install -g npm-auto-dep\n\n##Usage\nWorks only on linux/unix/(probably MacOS). Won\'t probably ever work on Windows out-of-the-box.[1]\n\nChange directory to main directory of your module sources. Run\n\n    npm-auto-dep\n\nOr you can just\n\n    npm-auto-dep /home/kitten_killer/dev/src/node/MAD_protocols\n\nWhich will (try to) find all it\'s dependencies and add them to it\'s package.json .\n\nModule must be initialized first. Best with `npm init`.\n\n`npm-auto-dep` will ask you what to do with every single module it found, like this:\n\n    Add package when [2.5.1] from git repo: https://github.com/cujojs/when\n    [N/y/v/=/>/~/r/c/h]:\n\nIf you enter `h` it will display a hint:\n\n    [No/yes/version/=version/>=version/~version/repository/custom/help]\n\nWhere:\n* No - (default behaviour) dependency will not be changed. If it already is in dependencies, it will stay the same way\n* yes - dependecy will be added, but without version information. That is any version will satisfy.\n* version - custom version specification. You will be asked to enter semver version range.[2]\n* =version - exactly the module version installed will be requested.\n* >=version - same or higher version then one installed will be requested\n* ~version - similar version will be requested. See also semver range spec.\n* repository - npm is told to clone this dependency from metadata specified repository. Currently only git is supported.\n* custom - enter whatever you like, as long as npm can understand it. (Currently `npm-auto-dep` does not validate that)\n* help - display hints and ask again what to do.\n\nAfter you are done you will have to confirm or reject changes, like that:\n\n    Old dependencies:\n    { when: \'>=2.5.1\',\n      semver: \'>=2.2.1\',\n      optimist: \'>=0.6.0\',\n      colors: \'>=0.6.2\' }\n    \n    New dependencies:\n    { when: \'>=2.5.0 <3.0.0\',\n      semver: \'>=2.2.1\',\n      optimist: \'>=0.6.0\',\n      colors: \'>=0.6.2\' }\n    Overwrite dependencies in file /home/kitten_killer/dev/src/npm-auto-dep/package.json ?\n    [y/n]: \n \n[1]: You can get grep and find from cygwin or something and add them to your PATH.\nIt could work, unless some strange CLI argument parsing ensues. Anyway, if you are\na developer able and wiling to do it, you should start using Linux by this point.\n\n[2]: Like that:\n\n    Add package when [2.5.1] from git repo: https://github.com/cujojs/when\n    Already in dependencies in version: >=2.5.1\n    [N/y/v/=/>/r/h]: v\n    Enter version specification (see man 7 semver)\n    > >=2.5.0 <3.0.0\n',
-40 silly resolved     readmeFilename: 'README.md',
-40 silly resolved     _id: 'npm-auto-dep@0.1.1',
-40 silly resolved     dist:
-40 silly resolved      { shasum: 'a93366ce3438ed8063d27446ecba2efbe7d87f31',
-40 silly resolved        tarball: 'http://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz' },
-40 silly resolved     _from: 'npm-auto-dep@',
-40 silly resolved     _npmVersion: '1.3.11',
-40 silly resolved     _npmUser: { name: 'ohjeez', email: 'npm@ojezu.org' },
-40 silly resolved     maintainers: [ [Object] ],
-40 silly resolved     directories: {},
-40 silly resolved     _shasum: 'a93366ce3438ed8063d27446ecba2efbe7d87f31',
-40 silly resolved     _resolved: 'https://registry.npmjs.org/npm-auto-dep/-/npm-auto-dep-0.1.1.tgz',
-40 silly resolved     homepage: 'https://github.com/OhJeez/npm-auto-dep' } ]
-41 info install npm-auto-dep@0.1.1 into /usr/lib
-42 info installOne npm-auto-dep@0.1.1
-43 verbose lib/node_modules/npm-auto-dep unbuild
-44 verbose tar unpack /home/thehoneymad/.npm/npm-auto-dep/0.1.1/package.tgz
-45 silly lockFile e227c4dc-sr-lib-node-modules-npm-auto-dep tar:///usr/lib/node_modules/npm-auto-dep
-46 verbose lock tar:///usr/lib/node_modules/npm-auto-dep /home/thehoneymad/.npm/e227c4dc-sr-lib-node-modules-npm-auto-dep.lock
-47 silly lockFile c54266c2-m-npm-auto-dep-0-1-1-package-tgz tar:///home/thehoneymad/.npm/npm-auto-dep/0.1.1/package.tgz
-48 verbose lock tar:///home/thehoneymad/.npm/npm-auto-dep/0.1.1/package.tgz /home/thehoneymad/.npm/c54266c2-m-npm-auto-dep-0-1-1-package-tgz.lock
-49 silly gunzTarPerm modes [ '775', '664' ]
-50 error Error: EACCES, mkdir '/usr/lib/node_modules/npm-auto-dep'
-50 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/npm-auto-dep']
-50 error   errno: 3,
-50 error   code: 'EACCES',
-50 error   path: '/usr/lib/node_modules/npm-auto-dep',
-50 error   fstream_type: 'Directory',
-50 error   fstream_path: '/usr/lib/node_modules/npm-auto-dep',
-50 error   fstream_class: 'DirWriter',
-50 error   fstream_stack:
-50 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
-50 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
-50 error      'Object.oncomplete (fs.js:107:15)' ] }
-51 error Please try running this command again as root/Administrator.
-52 error System Linux 3.13.0-24-generic
-53 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "npm-auto-dep"
-54 error cwd /NerdCats/Git/ProjectDP
-55 error node -v v0.10.32
-56 error npm -v 1.4.28
-57 error path /usr/lib/node_modules/npm-auto-dep
-58 error fstream_path /usr/lib/node_modules/npm-auto-dep
-59 error fstream_type Directory
-60 error fstream_class DirWriter
-61 error code EACCES
-62 error errno 3
-63 error stack Error: EACCES, mkdir '/usr/lib/node_modules/npm-auto-dep'
-64 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
-64 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
-64 error fstream_stack Object.oncomplete (fs.js:107:15)
-65 verbose exit [ 3, true ]
+19 verbose request id e8021d887758d3fe
+20 verbose url raw /bunyan
+21 verbose url resolving [ 'https://registry.npmjs.org/', './bunyan' ]
+22 verbose url resolved https://registry.npmjs.org/bunyan
+23 verbose request where is https://registry.npmjs.org/bunyan
+24 info trying registry request attempt 1 at 14:34:50
+25 http GET https://registry.npmjs.org/bunyan
+26 http 200 https://registry.npmjs.org/bunyan
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Sat, 11 Oct 2014 18:34:50 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"78WDLJZ2MPRPIP5B3HCJ0ABHP"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '139378',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '1874',
+27 silly registry.get     'x-served-by': 'cache-atl6222-ATL',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1413052490.292536,VS0,VE2',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'bunyan', range: '*', hasData: true }
+29 silly addNameRange versions [ 'bunyan',
+29 silly addNameRange   [ '0.1.0',
+29 silly addNameRange     '0.2.0',
+29 silly addNameRange     '0.3.0',
+29 silly addNameRange     '0.4.0',
+29 silly addNameRange     '0.5.0',
+29 silly addNameRange     '0.5.1',
+29 silly addNameRange     '0.5.2',
+29 silly addNameRange     '0.5.3',
+29 silly addNameRange     '0.6.0',
+29 silly addNameRange     '0.6.1',
+29 silly addNameRange     '0.6.2',
+29 silly addNameRange     '0.6.3',
+29 silly addNameRange     '0.6.4',
+29 silly addNameRange     '0.6.5',
+29 silly addNameRange     '0.6.6',
+29 silly addNameRange     '0.6.7',
+29 silly addNameRange     '0.6.8',
+29 silly addNameRange     '0.6.9',
+29 silly addNameRange     '0.7.0',
+29 silly addNameRange     '0.8.0',
+29 silly addNameRange     '0.9.0',
+29 silly addNameRange     '0.10.0',
+29 silly addNameRange     '0.11.0',
+29 silly addNameRange     '0.11.2',
+29 silly addNameRange     '0.11.3',
+29 silly addNameRange     '0.12.0',
+29 silly addNameRange     '0.13.0',
+29 silly addNameRange     '0.13.1',
+29 silly addNameRange     '0.13.2',
+29 silly addNameRange     '0.13.3',
+29 silly addNameRange     '0.13.4',
+29 silly addNameRange     '0.13.5',
+29 silly addNameRange     '0.14.0',
+29 silly addNameRange     '0.14.1',
+29 silly addNameRange     '0.14.2',
+29 silly addNameRange     '0.14.4',
+29 silly addNameRange     '0.14.5',
+29 silly addNameRange     '0.14.6',
+29 silly addNameRange     '0.15.0',
+29 silly addNameRange     '0.16.0',
+29 silly addNameRange     '0.16.1',
+29 silly addNameRange     '0.16.2',
+29 silly addNameRange     '0.16.3',
+29 silly addNameRange     '0.16.4',
+29 silly addNameRange     '0.16.5',
+29 silly addNameRange     '0.16.6',
+29 silly addNameRange     '0.16.7',
+29 silly addNameRange     '0.16.8',
+29 silly addNameRange     '0.17.0',
+29 silly addNameRange     '0.18.0',
+29 silly addNameRange     '0.18.1',
+29 silly addNameRange     '0.18.2',
+29 silly addNameRange     '0.18.3',
+29 silly addNameRange     '0.19.0',
+29 silly addNameRange     '0.20.0',
+29 silly addNameRange     '0.21.0',
+29 silly addNameRange     '0.21.1',
+29 silly addNameRange     '0.21.2',
+29 silly addNameRange     '0.21.3',
+29 silly addNameRange     '0.21.4',
+29 silly addNameRange     '0.22.0',
+29 silly addNameRange     '0.22.1',
+29 silly addNameRange     '0.22.2',
+29 silly addNameRange     '0.22.3',
+29 silly addNameRange     '0.23.0',
+29 silly addNameRange     '0.23.1',
+29 silly addNameRange     '1.0.0',
+29 silly addNameRange     '1.0.1',
+29 silly addNameRange     '1.1.0',
+29 silly addNameRange     '1.1.1',
+29 silly addNameRange     '1.1.2',
+29 silly addNameRange     '1.1.3' ] ]
+30 verbose addNamed [ 'bunyan', '1.1.3' ]
+31 verbose addNamed [ '1.1.3', '1.1.3' ]
+32 silly lockFile 6ad96b3e-bunyan-1-1-3 bunyan@1.1.3
+33 verbose lock bunyan@1.1.3 /home/thehoneymad/.npm/6ad96b3e-bunyan-1-1-3.lock
+34 silly lockFile 91d71085-pmjs-org-bunyan-bunyan-1-1-3-tgz https://registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz
+35 verbose lock https://registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz /home/thehoneymad/.npm/91d71085-pmjs-org-bunyan-bunyan-1-1-3-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz',
+36 verbose addRemoteTarball   '20dd423f5c816d8799cf58d89407052a1b8329b7' ]
+37 info retry fetch attempt 1 at 14:34:50
+38 verbose fetch to= /tmp/npm-17900-miPNcKHK/registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz
+39 http GET https://registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz
+40 http 200 https://registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz
+41 silly lockFile 91d71085-pmjs-org-bunyan-bunyan-1-1-3-tgz https://registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz
+42 silly lockFile 91d71085-pmjs-org-bunyan-bunyan-1-1-3-tgz https://registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz
+43 silly lockFile 6ad96b3e-bunyan-1-1-3 bunyan@1.1.3
+44 silly lockFile 6ad96b3e-bunyan-1-1-3 bunyan@1.1.3
+45 silly lockFile 59b53e6e-bunyan bunyan@
+46 silly lockFile 59b53e6e-bunyan bunyan@
+47 silly resolved [ { name: 'bunyan',
+47 silly resolved     version: '1.1.3',
+47 silly resolved     description: 'a JSON logging library for node.js services',
+47 silly resolved     author:
+47 silly resolved      { name: 'Trent Mick',
+47 silly resolved        email: 'trentm@gmail.com',
+47 silly resolved        url: 'http://trentm.com' },
+47 silly resolved     main: './lib/bunyan.js',
+47 silly resolved     bin: { bunyan: './bin/bunyan' },
+47 silly resolved     repository: { type: 'git', url: 'git://github.com/trentm/node-bunyan.git' },
+47 silly resolved     engines: [ 'node >=0.8.0' ],
+47 silly resolved     keywords: [ 'log', 'logging', 'log4j', 'json' ],
+47 silly resolved     dependencies: { mv: '~2' },
+47 silly resolved     '// comment: mv': '\'mv\' required for RotatingFileStream',
+47 silly resolved     '// comment: dtrace': 'dtrace-provider required for Bunyan dtrace features, but install is notoriously problematic on some plats (#135)',
+47 silly resolved     optionalDependencies: { mv: '~2' },
+47 silly resolved     devDependencies:
+47 silly resolved      { nodeunit: '0.7.4',
+47 silly resolved        ben: '0.0.0',
+47 silly resolved        verror: '1.3.3',
+47 silly resolved        vasync: '1.4.3' },
+47 silly resolved     scripts: { test: 'make test' },
+47 silly resolved     contributors:
+47 silly resolved      [ [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object],
+47 silly resolved        [Object] ],
+47 silly resolved     bugs: { url: 'https://github.com/trentm/node-bunyan/issues' },
+47 silly resolved     homepage: 'https://github.com/trentm/node-bunyan',
+47 silly resolved     _id: 'bunyan@1.1.3',
+47 silly resolved     _shasum: '20dd423f5c816d8799cf58d89407052a1b8329b7',
+47 silly resolved     _from: 'bunyan@',
+47 silly resolved     _npmVersion: '1.4.9',
+47 silly resolved     _npmUser: { name: 'trentm', email: 'trentm@gmail.com' },
+47 silly resolved     maintainers: [ [Object] ],
+47 silly resolved     dist:
+47 silly resolved      { shasum: '20dd423f5c816d8799cf58d89407052a1b8329b7',
+47 silly resolved        tarball: 'http://registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz' },
+47 silly resolved     directories: {},
+47 silly resolved     _resolved: 'https://registry.npmjs.org/bunyan/-/bunyan-1.1.3.tgz' } ]
+48 info install bunyan@1.1.3 into /usr/lib
+49 info installOne bunyan@1.1.3
+50 verbose lib/node_modules/bunyan unbuild
+51 verbose tar unpack /home/thehoneymad/.npm/bunyan/1.1.3/package.tgz
+52 silly lockFile f6d3daeb-tar-usr-lib-node-modules-bunyan tar:///usr/lib/node_modules/bunyan
+53 verbose lock tar:///usr/lib/node_modules/bunyan /home/thehoneymad/.npm/f6d3daeb-tar-usr-lib-node-modules-bunyan.lock
+54 silly lockFile f9cc6e67-mad-npm-bunyan-1-1-3-package-tgz tar:///home/thehoneymad/.npm/bunyan/1.1.3/package.tgz
+55 verbose lock tar:///home/thehoneymad/.npm/bunyan/1.1.3/package.tgz /home/thehoneymad/.npm/f9cc6e67-mad-npm-bunyan-1-1-3-package-tgz.lock
+56 silly gunzTarPerm modes [ '775', '664' ]
+57 error Error: EACCES, mkdir '/usr/lib/node_modules/bunyan'
+57 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/bunyan']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/lib/node_modules/bunyan',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/lib/node_modules/bunyan',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:107:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Linux 3.13.0-24-generic
+60 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "bunyan"
+61 error cwd /NerdCats/Git/ProjectDP
+62 error node -v v0.10.32
+63 error npm -v 1.4.28
+64 error path /usr/lib/node_modules/bunyan
+65 error fstream_path /usr/lib/node_modules/bunyan
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/lib/node_modules/bunyan'
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:107:15)
+72 verbose exit [ 3, true ]
