@@ -4,46 +4,60 @@ var Util=require("util");
 
 
 var Logger = projRequire("Lib::Logger");
+var GameRooms=projRequire("Lib::GameRealmsList");
 
-var Realms = [];
-var MAXROOMS = 50; //Dude you need a constant library;
+var Realms = []; // You kidding me?, This is fucking here?
+ //Dude you need a constant library;
 
 ///CreateRealm - Creates a Game Room for specified type
 ///
 ///
-function canCreateRealm()
+
+
+function joinRealm(player, room)
 {
-    return (Realms.length >= MAXROOMS) ;
+    //Let's join a room
+    if(GameRooms.ContainsRoom(room))
+    {
+        room.players.push(player);
+        if(GameRooms.UpdateRoom(room))
+        {
+            return true;
+        }
+        
+        
+    }
+    return false;
 }
 
 function createRealm(type)
 {
-    if (!canCreateRealm()) {
-        
-        var requiredGameRealm;
-        try {
-            var requiredModule = projRequire("Lib.Realms." + type + "Realm"); //This definitely will be handled better;
-            var GameRoomObj = new requiredModule[type+"Object"]();
+    var requiredGameRealm;
+    try 
+    {
+        var requiredModule = projRequire("Lib.Realms." + type + "Realm"); //This definitely will be handled better;
+        var GameRoomObj = new requiredModule[type+"Object"](); //Calling a MonopolyObject
             
-            Logger.CreateLogger(GameRoomObj); // Try catch here please
-            
-            Realms.push(GameRoomObj);
-            requiredGameRealm=GameRoomObj;
-            
-            
-            //I need to push the room here
-        }
-    catch (err) {
-            console.log(err);
-        }
+        Logger.CreateLogger(GameRoomObj); // Try catch here please
+        requiredGameRealm=GameRoomObj;
         
-        
-        
-        return requiredGameRealm? requiredGameRealm: false;
     }
-    else
-        return false; // Have to decide what should I return when rooms are maxed out // may be a seperate method canCreateRealm?
-
+    catch (err) 
+    {
+        ServerLogger.info(err);
+        throw err;
+        
+    }
+        
+        //Sanity check
+    if(!requiredGameRealm)
+    {
+        return false;
+    }
+        
+    return GameRooms.InsertRoom(requiredGameRealm);
+        
+     // Have to decide what should I return when rooms are maxed out // may be a seperate method canCreateRealm?
 }
 
 module.exports={
@@ -51,9 +65,3 @@ module.exports={
 };
 
 module.exports.CreateRealm=createRealm;
-module.exports.CanCreateRealm=canCreateRealm;
-
-
-
-
-

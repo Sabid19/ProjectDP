@@ -21,5 +21,5 @@ function getModule(module)
     
     return require(projDir + "/"+module);
 }
-x
+
 module.exports = GLOBAL.projRequire = getModule;
