@@ -31,7 +31,7 @@ function insertRoom(Room)
     if(!GameRooms[Room.id] && canInsertRoom(Room))
     {
         GameRooms[Room.id]=Room;
-        return true;
+        return Room;
     }
     else
     {

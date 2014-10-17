@@ -22,10 +22,10 @@ function joinRealm(player, room)
         room.players.push(player);
         if(GameRooms.UpdateRoom(room))
         {
+            Logger.LogConsole("Player joined in room "+ room.id, player);
+            ServerLogger.info("Player joined in room "+ room.id, player);
             return true;
         }
-        
-        
     }
     return false;
 }
@@ -54,7 +54,9 @@ function createRealm(type)
     {
         return false;
     }
-        
+    
+    
+    ServerLogger.info("Created Game Room ->", requiredGameRealm);    
     return GameRooms.InsertRoom(requiredGameRealm);
         
      // Have to decide what should I return when rooms are maxed out // may be a seperate method canCreateRealm?
@@ -65,3 +67,4 @@ module.exports={
 };
 
 module.exports.CreateRealm=createRealm;
+module.exports.JoinRealm=joinRealm;

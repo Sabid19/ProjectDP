@@ -4,6 +4,7 @@ var pRequire = require("./projRequire.js");
 var RealmFactoryModule = projRequire("Lib::RealmFactory");
 var Logger=projRequire("Lib::Logger");
 var conf=projRequire("Conf"); //Initializes the conf too! 
+var player=projRequire("Lib::Player");
 
 //METHODS
 
@@ -39,34 +40,24 @@ InitiateServer();
 
 
 module.exports.group={
-    CreateRealmTest: function (test){
-    
-        var ret = RealmFactoryModule.CreateRealm("Monopoly");
-        Logger.LogConsole("Logging Created Game Realm", [ret]);
-        ServerLogger.info("Logging Created Game Realm", [ret]);
-        
-        test.ok(ret, "This does finds the monopoly package");
-        test.done();
-        
-    },
-    
-    GlobalConfigTest:function(test)
+    TestPlayerCreation: function(test)
     {
-        GetGlobalConf();
-        Logger.LogConsole("Got Global Configuration", [GlobalConf]);
+        var createdPlayer=player.CreateNewPlayer();
+        Logger.LogConsole("Created player ", [createdPlayer]);
+        test.ok(createdPlayer, "This Created a player");
         
-        test.ok(GlobalConf, "This finds the config alright");
+        var room = RealmFactoryModule.CreateRealm("Monopoly");
+        Logger.LogConsole("Created Game room", [room]);
+        test.ok(room, "Room Creation Successfull");
+        
+        var result=RealmFactoryModule.JoinRealm(createdPlayer,room);
+        Logger.LogConsole("Player list in room after joining", [room.players]);
+        
+        
+        
         test.done();
         
     }
-    
-    // InitiateServerLoggerTest:function(test){
-    //     Logger.InitiateServerLogger();
-    //     Logger.LogConsole("Server Logger initiated", ServerLogger);
-    //     test.ok(ServerLogger, "Server logger successfully initiated");
-    //     test.done();
-        
-    // }
 };
 
 
