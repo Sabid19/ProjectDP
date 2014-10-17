@@ -22,9 +22,9 @@ function joinRealm(player, room)
     
     if(GameRooms.ContainsRoom(room))
     {
-        if(room.MAXPLAYER<room.players.length)
+        if(room.players.length < room.MAXPLAYER)
         {
-            room.players.push(player);
+            room.JoinRealm(player);
             if(GameRooms.UpdateRoom(room))
             {
                 Logger.LogConsole("Player joined in room "+ room.id, player);

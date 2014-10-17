@@ -16,7 +16,12 @@ function MonopolyRealm()
     
     this.gameState=new monopolyStateModule.MonopolyStateObject();
     
-    
+    this.JoinRealm=function(player)
+    {
+        this.players.push(player);
+        //Initiating the first position of the player
+        this.gameState.playerPositions[player.playerId]= new monopolyStateModule.PlayerPositionObject(player.playerId, 0);
+    };
     //When do we initiate a player state in the game state dweeb?
 }
 

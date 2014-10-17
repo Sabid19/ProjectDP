@@ -51,6 +51,8 @@ module.exports.group={
         test.ok(room, "Room Creation Successfull");
         
         var result=RealmFactoryModule.JoinRealm(createdPlayer,room);
+        test.ok(result, "Room joining status check");
+        Logger.LogConsole("Room status after player joining room", [room]);
         Logger.LogConsole("Player list in room after joining", [room.players]);
         
         

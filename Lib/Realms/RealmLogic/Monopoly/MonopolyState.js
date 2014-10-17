@@ -1,6 +1,6 @@
 function MonopolyState()
 {
-    this.playerPositions=[];
+    this.playerPositions={};
 }
 
 function PlayerPosition(PlayerId, PositionIndex)
