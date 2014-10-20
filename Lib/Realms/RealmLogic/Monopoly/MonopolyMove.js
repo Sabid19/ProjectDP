@@ -2,11 +2,11 @@
 //and sent back here
 
 
-function MonopolyMove(PlayerId)
+function MonopolyMove(PlayerId, OldPositionIndex, NewPositionIndex)
 {
     this.playerId=PlayerId;
-    this.oldPositionIndex;
-    this.NewPositionIndex;
+    this.oldPositionIndex=OldPositionIndex;
+    this.newPositionIndex=NewPositionIndex;
 }
 
 

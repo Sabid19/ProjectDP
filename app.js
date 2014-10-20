@@ -42,20 +42,34 @@ InitiateServer();
 module.exports.group={
     TestPlayerCreation: function(test)
     {
+        var MonopolyMoveModule=projRequire("Lib::Realms::RealmLogic::Monopoly::MonopolyMove");
+        
         var createdPlayer=player.CreateNewPlayer();
-        Logger.LogConsole("Created player ", [createdPlayer]);
+        Logger.LogConsole("CREATED PLAYER ", [createdPlayer]);
         test.ok(createdPlayer, "This Created a player");
         
         var room = RealmFactoryModule.CreateRealm("Monopoly");
-        Logger.LogConsole("Created Game room", [room]);
+        Logger.LogConsole("CREATED GAME ROOM", [room]);
         test.ok(room, "Room Creation Successfull");
         
         var result=RealmFactoryModule.JoinRealm(createdPlayer,room);
         test.ok(result, "Room joining status check");
-        Logger.LogConsole("Room status after player joining room", [room]);
-        Logger.LogConsole("Player list in room after joining", [room.players]);
+        Logger.LogConsole("ROOM STATUS AFTER JOINING PLAYER", [room]);
+        Logger.LogConsole("PLAYER LIST AFTER JOINING ROOM", [room.players]);
         
+        var moveObject=new MonopolyMoveModule.MonopolyMoveObject(createdPlayer.playerId, 0,9)
         
+        Logger.LogConsole("MOVE OBJECT AFTER INITIALIZATION", [moveObject]);
+        //room.handleMove();
+        
+        room.handleMove(moveObject);
+        
+        moveObject.oldPositionIndex=9;
+        moveObject.newPositionIndex=22;
+        
+        room.handleMove(moveObject);
+        
+        Logger.LogConsole("LOGGING ROOM STATE AFTER UPDATE", [room]);
         
         test.done();
         

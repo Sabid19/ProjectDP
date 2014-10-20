@@ -22,6 +22,7 @@ function joinRealm(player, room)
     
     if(GameRooms.ContainsRoom(room))
     {
+        
         if(room.players.length < room.MAXPLAYER)
         {
             room.JoinRealm(player);
