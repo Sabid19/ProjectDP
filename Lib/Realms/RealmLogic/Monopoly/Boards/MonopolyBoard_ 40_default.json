@@ -1,5 +1,20 @@
 {
     "size": 40,
     "theme": "default",
-    "name" : "basic themed 40 block board"
+    "name" : "basic themed 40 block board",
+    "groupCodes":["violet", "skyblue", "magenta", "orange", "red", "yellow", "green", "blue", "chance", "utility", "station"],
+    
+    "blocks":{
+        "0":{
+            "name":"go",
+            "price":0,
+            "groupCode":"violet",
+            "buyable":false,
+        },
+        "1":{
+            "name":"St. Chapel's place",
+            "price":"140",
+            "groupCode":"violet"
+        }
+    }
 }

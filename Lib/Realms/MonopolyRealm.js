@@ -29,7 +29,7 @@ function MonopolyRealm()
     
     this.handleMove=function(MonopolyMove)
     {
-        this.logicModule.handleMove(MonopolyMove, this.gameState);
+        this.logicModule.handleMove(MonopolyMove, this.gameState, this.board);
     };
     
     
