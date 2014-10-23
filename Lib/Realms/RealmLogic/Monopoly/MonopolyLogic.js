@@ -26,15 +26,19 @@ function MonopolyLogic()
                 throw ("Invalid move as Dice difference is greater than 12");
                 
             }
-            
-            //this is wrong
+        
             
             GameState.playerPositions[MonopolyMove.playerId].positionIndex=MonopolyMove.newPositionIndex;
+            
+            
     };
     
-    var updateAssets=function()
+    var updateAssets=function(GameState)
     {
+        
         //Now first thing we need to check the block I landed on is owned or not
+        
+        
     };
     
     
@@ -56,8 +60,8 @@ function MonopolyLogic()
             try{
                 //Update the move first
                 updateMove(MonopolyMove, GameState, GameBoard);
-                //Updatation done, now pay the taxes or start an auction if player doesn't buy this shit
-                
+                //Now we should update the damn assets
+                updateAssets(MonopolyMove);
                 
             }
             catch(err)

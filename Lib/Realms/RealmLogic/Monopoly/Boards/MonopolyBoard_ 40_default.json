@@ -2,19 +2,289 @@
     "size": 40,
     "theme": "default",
     "name" : "basic themed 40 block board",
-    "groupCodes":["violet", "skyblue", "magenta", "orange", "red", "yellow", "green", "blue", "chance", "utility", "station"],
+    "groupCodes":["brown", "skyblue", "magenta", "orange", "red", "yellow", "green", "blue", "chance", "chest", "utility", "station", "tax", "jail", "parking"],
     
-    "blocks":{
-        "0":{
-            "name":"go",
+    "blocks":[
+        {
+            "index":0,
+            "name":"Go",
             "price":0,
-            "groupCode":"violet",
+            "groupCode":"brown",
             "buyable":false,
         },
-        "1":{
+        {
+            "index":1,
             "name":"St. Chapel's place",
-            "price":"140",
-            "groupCode":"violet"
+            "price":60,
+            "groupCode":"brown",
+            "buyable":true
+        },
+        {
+            "index":2,
+            "name":"Whitechapel Road",
+            "price":60,
+            "groupCode":"brown",
+            "buyable":true
+        },
+        {
+            "index":3,
+            "name":"Whitechapel Road",
+            "price":60,
+            "groupCode":"brown",
+            "buyable":true
+        },
+        {
+            "index":4,
+            "name":"Income Tax",
+            "price":200,
+            "groupCode":"tax",
+            "buyable":false
+        },
+        {
+            "index":5,
+            "name":"Kings Cross Station",
+            "price":200,
+            "groupCode":"station",
+            "buyable":true
+        },
+        {
+            "index":6,
+            "name":"The Angel Islington",
+            "price":100,
+            "groupCode":"skyblue",
+            "buyable":true
+        },
+        {
+            "index":7,
+            "name":"Chance",
+            "price":0,
+            "groupCode":"chance",
+            "buyable":false
+        },
+        {
+            "index":8,
+            "name":"Euston Road",
+            "price":100,
+            "groupCode":"skyblue",
+            "buyable":true
+        },
+        {
+            "index":9,
+            "name":"PentonVille Road",
+            "price":120,
+            "groupCode":"skyblue",
+            "buyable":true
+        },
+        {
+            "index":10,
+            "name":"Jail",
+            "price":0, 
+            "groupCode":"jail",
+            "buyable":false
+        },
+        {
+            "index":11,
+            "name":"Pall Mall",
+            "price":140,
+            "groupCode":"magenta",
+            "buyable":true
+        },
+        {
+            "index":12,
+            "name":"Electric Company",
+            "price":150,
+            "groupCode":"utility",
+            "buyable":true
+        },
+        {
+            "index":13,
+            "name":"Whitehall",
+            "price":140,
+            "groupCode":"magenta",
+            "buyable":true
+        },
+        {
+            "index":14,
+            "name":"Northumrld Avenue",
+            "price":160,
+            "groupCode":"magenta",
+            "buyable":true
+        },
+        {
+            "index":15,
+            "name":"Marylebone Station",
+            "price":200,
+            "groupCode":"station",
+            "buyable":true
+        },
+        {
+            "index":16,
+            "name":"Bow Street",
+            "price":180,
+            "groupCode":"orange",
+            "buyable":true
+        },
+        {
+            "index":17,
+            "name":"Community Chest",
+            "price":0,
+            "groupCode":"chest",
+            "buyable":false
+        },
+        {
+            "index":18,
+            "name":"Marlborough Street",
+            "price":180,
+            "groupCode":"orange",
+            "buyable":true
+        },
+        {
+            "index":19,
+            "name":"Vine Street",
+            "price":200,
+            "groupCode":"orange",
+            "buyable":true
+        },
+        {
+            "index":20,
+            "name":"Free Parking",
+            "price":0,
+            "groupCode":"parking",
+            "buyable":false
+        },
+        {
+            "index":21,
+            "name":"Strand",
+            "price":220,
+            "groupCode":"red",
+            "buyable":true
+        },
+        {
+            "index":22,
+            "name":"Chance",
+            "price":0,
+            "groupCode":"chance",
+            "buyable":false
+        },
+        {
+            "index":23,
+            "name":"Fleet Street",
+            "price":220,
+            "groupCode":"red",
+            "buyable":true
+        },
+        {
+            "index":24,
+            "name":"Trafaglar Square",
+            "price":240,
+            "groupCode":"red",
+            "buyable":true
+        },
+        {
+            "index":25,
+            "name":"Fenchurch St. Station",
+            "price":200,
+            "groupCode":"station",
+            "buyable":true
+            
+        },
+        {
+            "index":"26",
+            "name":"Leicester Square",
+            "price":260,
+            "groupCode":"yellow",
+            "buyable":true
+        },
+        {
+            "index":27,
+            "name":"Coventry Street",
+            "price":260,
+            "groupCode":"yellow",
+            "buyable":true
+        },
+        {
+            "index":28,
+            "name":"Water Works",
+            "price":150,
+            "groupCode":"yellow",
+            "buyable":true
+        },
+        {
+            "index":29,
+            "name":"Picadilly",
+            "price":280,
+            "groupCode":"yellow",
+            "buyable":true
+        },
+        {
+            "index":30,
+            "name":"Go To Jail",
+            "price":0,
+            "groupCode":"jail",
+            "buyable":false
+        },
+        {
+            "index":31,
+            "name":"Regent Street",
+            "price":300,
+            "groupCode":"green",
+            "buyable":true
+        },
+        {
+            "index":32,
+            "name":"Oxford Street",
+            "price":300,
+            "groupCode":"green",
+            "buyable":true
+        },
+        {
+            "index":33,
+            "name":"Community Chest",
+            "price":0,
+            "groupCode":"chest",
+            "buyable":false
+        },
+        {
+            "index":34,
+            "name":"Bond Street",
+            "price":300,
+            "groupCode":"green",
+            "buyable":true
+        },
+        {
+            "index":35,
+            "name":"Liverpool St. Station",
+            "price":200,
+            "groupCode":"station",
+            "buyable":true
+        },
+        {
+            "index":36,
+            "name":"Chance",
+            "price":0,
+            "groupCode":"chance",
+            "buyable":false
+        },
+        {
+            "index":37,
+            "name":"Park Lane",
+            "price":350,
+            "groupCode":"blue",
+            "buyable":true
+        },
+        {
+            "index":38,
+            "name":"Super Tax",
+            "price":100,
+            "groupCode":"tax",
+            "buyable":false
+        },
+        {
+            "index":39,
+            "name":"Mayfair",
+            "price":400,
+            "groupCode":"green",
+            "buyable":true
         }
-    }
+    ]
 }

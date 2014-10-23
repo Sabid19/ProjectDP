@@ -1,12 +1,15 @@
 function MonopolyState()
 {
     this.playerPositions={};
+    
 }
 
 function PlayerPosition(PlayerId, PositionIndex)
 {
     this.playerId=PlayerId;
     this.positionIndex=PositionIndex;
+    
+    
 }
 
 module.exports={
