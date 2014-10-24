@@ -5,13 +5,23 @@ var gameEntityType=projRequire('Lib::GameEntityType');
 var monopolyBoard=projRequire('Lib::Realms::RealmLogic::Monopoly::MonopolyBoard');
 var monopolyStateModule=projRequire("Lib::Realms::RealmLogic::Monopoly::MonopolyState");
 var monopolyLogic= projRequire("Lib::Realms::RealmLogic::Monopoly::MonopolyLogic");
+var monopolyBank=projRequire("Lib::Realms::RealmLogic::Monopoly::MonopolyBank");
+var Logger = projRequire("Lib::Logger");
 
 function MonopolyRealm()
 {
-    this.MAXPLAYER=5; //Should be configurable?
-    this.board=monopolyBoard.GetMonopolyBoard();
     this.description = "Monopoly GameRoom Object";
     this.type="Monopoly";
+    this.MAXPLAYER=5; //Should be configurable?
+    
+    //Attach the logger first
+    Logger.CreateLogger(this); // Try catch here please
+    
+    this.board=monopolyBoard.GetMonopolyBoard();
+    this.bank=new monopolyBank.MonopolyBankObject(this.board);
+    
+    
+    
     this.id=crypto.GetSha1Hash(gameEntityType.GameRealm, this.type); //This is definitely going to be hooked up
     this.players=[];
     

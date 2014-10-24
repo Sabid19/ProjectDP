@@ -3,6 +3,7 @@ var logger=projRequire("Lib::Logger");
 
 
 
+
 function MonopolyLogic()
 {
     var MAXDICE=12;
@@ -66,6 +67,7 @@ function MonopolyLogic()
             }
             catch(err)
             {
+                //Should be logged in room you fool
                 logger.LogConsole("ERROR", [err]);
                 ServerLogger.info("ERROR", err);
                 

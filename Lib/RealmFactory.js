@@ -46,7 +46,7 @@ function createRealm(type)
         var requiredModule = projRequire("Lib.Realms." + type + "Realm"); //This definitely will be handled better;
         var GameRoomObj = new requiredModule[type+"Object"](); //Calling a MonopolyObject
             
-        Logger.CreateLogger(GameRoomObj); // Try catch here please
+        
         requiredGameRealm=GameRoomObj;
         
     }

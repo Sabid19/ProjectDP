@@ -2,15 +2,15 @@
     "size": 40,
     "theme": "default",
     "name" : "basic themed 40 block board",
-    "groupCodes":["brown", "skyblue", "magenta", "orange", "red", "yellow", "green", "blue", "chance", "chest", "utility", "station", "tax", "jail", "parking"],
+    "groupCodes":["start","brown", "skyblue", "magenta", "orange", "red", "yellow", "green", "blue", "chance", "chest", "utility", "station", "tax", "jail", "parking"],
     
     "blocks":[
         {
             "index":0,
             "name":"Go",
             "price":0,
-            "groupCode":"brown",
-            "buyable":false,
+            "groupCode":"start",
+            "buyable":false
         },
         {
             "index":1,
@@ -285,6 +285,24 @@
             "price":400,
             "groupCode":"green",
             "buyable":true
+        }
+    ],
+    
+    "assets":[
+        
+        {
+            "name":"house",
+            "price":100,
+            "max":4,
+            "rank":1
+        },
+       
+        {
+            "name":"hotel",
+            "price":150,
+            "max":2,
+            "rank":2,
+            "invalidatePreviousRank":true
         }
     ]
 }

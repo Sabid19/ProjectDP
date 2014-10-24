@@ -7,17 +7,19 @@ var BoardsList=[]; // Should we actually keep this one here? The loader module s
 
 function MonopolyBoard()
 {
-    //THIS IS STATIC, ALL OF THESE WILL BE CHANGED AS THERE SHOULD BE A BOARD LOADER FROM BOARDS FOLDER
+    
     this.boardSize= 40;
     this.defaultTheme="default";
-    
-    
     
 }
 
 function getMonopolyBoard()
 {
-    return new MonopolyBoard();
+    //THIS IS STATIC, ALL OF THESE WILL BE CHANGED AS THERE SHOULD BE A BOARD LOADER FROM BOARDS FOLDER
+    //Im still confused about the board loader, let's make the logic works first
+    
+    var board= JSON.parse(fs.readFileSync(__dirname+'/Boards/MonopolyBoard_ 40_default.json'));
+    return board;
 }
 
 function loadMonopolyBoards()
